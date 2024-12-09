@@ -30,22 +30,15 @@ The workflow is defined in the `.github/workflows/ci-cd.yml` file and is trigger
 5. **Deploy to Kubernetes**: Uses `kubectl` to deploy the application to the cluster using configuration files in the `k8s/` directory.
 6. **Send Slack Notification**: Sends a message to Slack indicating the success or failure of the deployment.
 
-### 5. **Handling Sensitive Information**
-Sensitive data such as API keys, Docker credentials, and Slack webhooks are stored securely in GitHub Secrets. These secrets are referenced in the workflow and scripts using the syntax `${{ secrets.SECRET_NAME }}`, ensuring they are not exposed in the codebase or logs.
-
-### 6. **Setup and Configuration**
-1. **GitHub Secrets**:
-   - Navigate to **Settings** > **Secrets and variables** > **Actions** in your GitHub repository.
-   - Add secrets such as `DOCKER_HUB_USERNAME`, `DOCKER_HUB_ACCESS_TOKEN`, and `SLACK_WEBHOOK_URL`.
-
-2. **Local Testing**:
+### 5. **Setup and Configuration**
+1. **Local Testing**:
    - Install dependencies with `npm install`.
    - Run tests using `npm test`.
 
-3. **Docker Build**:
+2. **Docker Build**:
    - Build the Docker image locally with `docker build -t my-app .`.
 
-4. **Deploy to Kubernetes**:
+3. **Deploy to Kubernetes**:
    - Ensure `kubectl` is configured to communicate with your Kubernetes cluster.
    - Apply the Kubernetes manifests using `kubectl apply -f k8s/`.
 
