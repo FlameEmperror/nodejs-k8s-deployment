@@ -42,5 +42,5 @@ The workflow is defined in the `.github/workflows/ci-cd.yml` file and is trigger
    - Ensure `kubectl` is configured to communicate with your Kubernetes cluster.
    - Apply the Kubernetes manifests using `kubectl apply -f k8s/`.
 
-### 7. **Conclusion**
+### 6. **Conclusion**
 This CI/CD pipeline ensures that the Node.js application is tested, containerized, deployed, and monitored efficiently. It streamlines the development process, reducing manual steps and the risk of human error, while maintaining high code quality and system reliability.
